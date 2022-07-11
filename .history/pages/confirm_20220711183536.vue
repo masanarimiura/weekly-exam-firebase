@@ -8,6 +8,15 @@
   </div>
 </template>
 
+<script>
+export default {
+  crea {
+    console.log($store.state.userData)
+  }
+}
+
+</script>
+
 <style scoped>
 .confirm {
   height: 100vh;

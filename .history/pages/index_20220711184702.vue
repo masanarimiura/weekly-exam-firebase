@@ -23,15 +23,15 @@ export default {
         .signInWithPopup(provider)
         .then((data) => {
           console.log(data)
-          this.name = data.user.displayName;
+          this.name = data.user.name;
           this.email = data.user.email;
         })
       const userData = {
-        name: this.name,
+        name: this.name ,
         email: this.email,
       };
       this.$store.commit('sendLoginUserData', userData);
-      this.$router.push('/confirm');
+      // this.$router.push('/confirm');
     },
   },
 };

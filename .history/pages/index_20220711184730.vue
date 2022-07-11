@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import { urlToHttpOptions } from "url";
 import firebase from "~/plugins/firebase";
 export default {
   data() {
@@ -23,15 +24,15 @@ export default {
         .signInWithPopup(provider)
         .then((data) => {
           console.log(data)
-          this.name = data.user.displayName;
+          this.name = data.user.name;
           this.email = data.user.email;
         })
       const userData = {
-        name: this.name,
+        name: this.name + .family,
         email: this.email,
       };
       this.$store.commit('sendLoginUserData', userData);
-      this.$router.push('/confirm');
+      // this.$router.push('/confirm');
     },
   },
 };

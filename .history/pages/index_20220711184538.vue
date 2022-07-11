@@ -22,8 +22,7 @@ export default {
         .auth()
         .signInWithPopup(provider)
         .then((data) => {
-          console.log(data)
-          this.name = data.user.displayName;
+          this.name = data.user.name;
           this.email = data.user.email;
         })
       const userData = {
@@ -31,7 +30,8 @@ export default {
         email: this.email,
       };
       this.$store.commit('sendLoginUserData', userData);
-      this.$router.push('/confirm');
+      console.log(userData)
+      // this.$router.push('/confirm');
     },
   },
 };

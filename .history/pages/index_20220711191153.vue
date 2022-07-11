@@ -31,7 +31,7 @@ export default {
         email: this.email,
       };
       this.$store.commit('sendLoginUserData', userData);
-      this.$router.push('/confirm');
+      // this.$router.push('/confirm');
     },
   },
 };

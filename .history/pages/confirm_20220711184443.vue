@@ -2,11 +2,21 @@
   <div class="confirm">
     <div>
       <h1>ログイン完了！！</h1>
+      <button @click="check()"></button>
       <p>{{ $store.state.userData.name }}</p>
-      <p>{{ $store.state.userData.email }}</p>
+      <p>{{ $store.state.userData}}</p>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  check() {
+    console.log(userData)
+  }
+}
+
+</script>
 
 <style scoped>
 .confirm {

@@ -8,6 +8,9 @@
   </div>
 </template>
 
+<script>
+</script>
+
 <style scoped>
 .confirm {
   height: 100vh;
